@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>  
+    <link rel="stylesheet" href="/static/css/style.css"/> 
+    <link rel="icon" href="/static/i.png"/>
+  </head>
+  <body style="background: rgb(114, 114, 114);">
+    <div class="login">
+      <h1>Online Hesap Makinesi</h1>
+        <form action="{{ url_for('predict')}}"method="post">
+            <input type="text" name="a" placeholder="İlk sayıyı girin" required="required" />
+            <input type="text" name="b" placeholder="İkici sayıyı girin" required="required" />
+            <input type="text" name="operation" placeholder="toplama(+) / çıkarma(-) / bölme(/) / çarpma(*) / mod(%)" required="required" />
+            Sonuç: {{ prediction_text }}
+            <br>
+            <button type="submit" class="submit__button">Hesapla</button>
+        </form>   
+      <br>
+      <p class="footer__name">Taha Eren Afacan 7157</p>
+    </div>
+  </body>
+</html>
